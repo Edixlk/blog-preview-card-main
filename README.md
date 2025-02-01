@@ -1,4 +1,4 @@
-This one of the projects I was working on with the help of frontend mentor
+This one of the projects I was working on with the help of frontend mentor in order to sharpen up my skills when it comes to puttting together a website
 
 ### How i managed to solve some of the issues when putting this site together ###
 
