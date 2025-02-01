@@ -1,0 +1,185 @@
+/*font style for site (stored locally)*/
+
+/*regular font style */
+@font-face {
+  font-family: Cust-font;
+  src: url(./assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+/* italic font style */
+@font-face {
+  font-family: Cust-font2;
+  src: url(./assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: Cust-font;
+}
+
+/*variable colors*/
+
+:root {
+  --Yellow: hsl(47, 88%, 63%);
+  --Dark-Yellow: hsla(47, 49%, 23%, 0.429);
+  --White: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+}
+
+body {
+  background-color: var(--Yellow); /* for background color*/
+}
+
+/* container where the card is contained */
+
+.container {
+    padding: 3em;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*-------------------------*/
+
+/* styling for card */
+
+.card {
+  padding: 1.2em;
+  border-radius: 15px;
+  width: 350px;
+  height: auto;
+  background-color: var(--White);
+  box-shadow: 9px 7px 0px -1px #000000;
+  border: 1.3px solid #000000;
+}
+
+
+.card {
+  gap: 0.2em;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+/* only the h1 text should change to yellow when the mouse is hover over it */
+
+.card:hover h1 {
+  color: var(--Yellow);
+}
+
+/* 'learning' text */
+.catergory-txt {
+  background-color: var(--Yellow);
+  color: var(--gray-950);
+  width: fit-content;
+  padding: 4px 9px;
+  border-radius: 3px;
+  margin-bottom: 0.5em;
+}
+
+.txt-date {
+    font-size: 13px;
+}
+
+/*SVG image for the card */
+.card-img img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.9em;
+}
+
+/* for title tex */
+.card-txt-cont h1 {
+  font-weight: 800;
+  margin: 0.4em 0;
+  font-size: clamp(10px, 25px, 30px);
+}
+
+
+/* for paragraph below title */
+.card-txt-cont p {
+  color: var(--gray-500);
+  margin: 1em 0;
+  font-size: clamp(5px, calc(0.1vw + 0.9em), 20px);
+  font-weight: 500;
+}
+
+/* for proile below paragraph */
+.card-profile {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 10px;
+}
+
+/* this will make the profile handle in line with the avatar image. */
+.card-profile h6 {
+  font-size: 0.8em;
+  font-weight: 800;
+  line-height: 35px;
+}
+
+
+/* for github link*/
+
+.github-link {
+    position: absolute;
+    right: 10%;
+    bottom: 5%;
+    float: right;
+  }
+  
+  
+  /* text on link */
+  
+  .github-link a {
+    display: block;
+    font-size: clamp(10px, calc(0.4em + 3em), 30px);
+    color: var(--Dark-Yellow);
+    text-decoration: none;
+  }
+  
+  /* github icon */
+  
+  .fa-github {
+    margin-right: 5px;
+  }
+
+
+  /*--------MEDIA QUERIES---------*/
+
+  /* medium screens */
+
+@media screen and (max-width: 375px) {
+    .card {
+        width: clamp(200px, 300px, 350px);
+    }
+
+    .card-txt-cont h1 {
+        font-size: clamp(10px, 22px, 30px);
+    }
+
+    .card-txt-cont p {
+       font-size:  clamp(5px, calc(0.2vw + 0.9em), 20px);
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .github-link {
+      position: static;
+      display: flex;
+      align-self: center;
+      margin-top: 2.2em;
+    }
+    
+  }
+
+/*-------------------------------------*/
