@@ -12,6 +12,11 @@
   src: url(./assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
 }
 
+::selection {
+  color: var(--gray-950);
+  background-color:  var(--Yellow);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -109,6 +114,7 @@ body {
   margin: 1em 0;
   font-size: clamp(5px, calc(0.1vw + 0.9em), 20px);
   font-weight: 500;
+  line-height: 1.5em;
 }
 
 /* for proile below paragraph */
